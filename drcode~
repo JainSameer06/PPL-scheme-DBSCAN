@@ -1,0 +1,15 @@
+#lang racket
+
+(define inFile(open-input-file "/home/sameer/Projects/PPL Assignment/resources/t0.in"))
+;(read-line inFile)
+
+(define (trav input-file l)
+  (define nextLine (read-line input-file))
+  (if (eof-object? nextLine)
+      l
+      (cons nextLine (trav input-file l))))
+      
+
+;(define (trav inputList)
+;  (if (null? inputList)
+                              
